@@ -11,6 +11,8 @@ function updateTime () {
     
     let pmam = hours >= 12 ? "pm" : "am";
     hours = hours % 12;
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
 
     document.querySelector('.time__weekday')
     .innerHTML = dayNames[day];
